@@ -1,0 +1,1 @@
+<a href="<?php echo base_url()."index.php/home/tambah_guru";?>" class="btn btn-info">Tambah Guru</a><br><br>

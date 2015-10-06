@@ -1,0 +1,1 @@
+<a href="<?php echo base_url()."index.php/home/tambah_kelas_siswa/$datanya";?>" class="btn btn-info">Tambah Siswa di Kelas</a><br><br>

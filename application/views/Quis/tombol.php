@@ -1,0 +1,1 @@
+<a href="<?php echo base_url()."index.php/home/tambah_quis/$id_mapel";?>" class="btn btn-info">Tambah Quis</a><br><br>

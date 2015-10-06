@@ -1,0 +1,80 @@
+<head>
+<script>
+	var masukan=0;
+	function tambah(){
+		var table = document.getElementById('id_daftar');
+		var tr	  = document.createElement('tr');
+		var td1	  = document.createElement('td');
+		var td2	  = document.createElement('td');
+		var td3	  = document.createElement('td');
+		
+		
+		var inp1 = document.createElement("TD");
+		inp1.setAttribute("align","center"); 
+		inp1.innerHTML="<textarea></textarea><br><br>";
+		
+		var inp2  = document.createElement('td');
+			inp2.setAttribute("align","center");
+			inp2.innerHTML="<table><tr>A.<input type='text' id='num' name='harga[]'><br> B.<input type='text' id='num' name='harga[]'><br><br> C.<input type='text' id='num' name='harga[]'><br><br></tr></table>";
+			
+		
+		
+		if (masukan > 0){
+			var gambar = document.createElement('img');
+			gambar.setAttribute('src',"<?php echo base_url().'asset/img/icon-delete.png';?>");
+			gambar.onclick = function(){
+				hapuscustomer(tr);
+			}
+			td1.appendChild(gambar);
+		}
+		
+		table.appendChild(tr);
+		tr.appendChild(td1);
+		tr.appendChild(td2);
+		tr.appendChild(td3);
+		
+		td2.appendChild(inp1);
+		td3.appendChild(inp2);
+		
+		
+		masukan++;
+	}
+	
+	function hapuscustomer(tr){
+		tr.parentNode.removeChild(tr);
+	}
+</script>
+</head>
+<div class="row-fluid sortable">
+	<div class="box span12">
+		<div class="box-header" data-original-title>
+			<h2><i class="halflings-icon edit"></i><span class="break"></span>Form Quis</h2>
+			<div class="box-icon">
+				<a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>		
+			</div>
+		</div>
+		<div class="box-content">
+			<form class="form-horizontal" method="post" action="<?php echo base_url()."index.php/operasi_daftar/insert_quis";?>">
+				<fieldset>
+				 
+
+				  <table>
+						<tbody id="id_daftar">
+							<tr>
+							<a href="javascript:tambah();">Tambah</a><br><br>
+							</tr>		
+						</tbody>
+
+					</table>	
+
+				  <div class="form-actions">
+					<button type="submit" class="btn btn-primary">Simpan</button>
+					<input type="reset" class="btn" value="Batal">
+				  </div>
+				</fieldset>
+			  </form>
+		
+		</div>
+	</div><!--/span-->
+			
+</div><!--/row-->

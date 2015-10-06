@@ -1,0 +1,1 @@
+<a href="<?php echo base_url()."index.php/home/tambah_nilai_tugas/$id_kelas/$id_tugas";?>" class="btn btn-info">Tambah Nilai</a><br><br>

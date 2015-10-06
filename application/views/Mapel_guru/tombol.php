@@ -1,0 +1,1 @@
+<a href="<?php echo base_url()."index.php/home/tambah_kelas_mapel/$id_mapel";?>" class="btn btn-info">Tambah Kelas di Matapelajaran</a><br><br>
